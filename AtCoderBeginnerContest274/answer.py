@@ -1,7 +1,7 @@
-# import sys
-# # import collections
-# from collections import defaultdict, Counter
-# # Re
+import sys
+# import collections
+from collections import defaultdict, Counter
+# Re
 # def main(lines):
 #     n,m = map(int, lines[0].split(' '))
 #     # keys = [i for i in range(0, m)]
@@ -17,13 +17,11 @@
 #     print(' '.join(result))
     
 if __name__ == '__main__':
-    # lines = []
-    # for l in sys.stdin:
-    #     lines.append(l.rstrip('\r\n'))
-    # main(lines)
-    n, m = list(map(int, input().split( )))
-    grid = [input() for _ in range(n)]
-    print('grid', grid, type(grid))
-    print('*grid', *grid)
-    res = [''.join(col).count('#') for col in zip(*grid)]
-    print(' '.join(str(v) for v in res))
+    n = int(input())
+    m = list(map(int, input().split(' ')))
+    result = [0] * (2 * n +1)
+    for i,v in enumerate(m):
+        result[2*i+1]=result[v-1]+1
+        result[2*i+2]=result[v-1]+1
+        
+    print(*result,sep="\n")
