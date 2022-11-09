@@ -1,0 +1,4 @@
+input.txtには問題で与えられた入力サンプルをコピーするもの
+knowledge.txtはコンテスト最中や前後に見返すためのもの
+# atcoder_practice
+# atcoder_practice
